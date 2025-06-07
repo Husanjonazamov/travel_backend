@@ -5,4 +5,7 @@ from core.apps.api.models import TravelModel
 
 @register(TravelModel)
 class TravelTranslation(TranslationOptions):
-    fields = []
+    fields = [
+        "name",
+        "description"
+    ]
