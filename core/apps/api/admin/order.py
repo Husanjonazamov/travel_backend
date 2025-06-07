@@ -8,5 +8,9 @@ from core.apps.api.models import OrderModel
 class OrderAdmin(ModelAdmin):
     list_display = (
         "id",
-        "__str__",
+        "name",
+        "phone",
+        "payment_type",
+        "quantity",
+        "status"
     )

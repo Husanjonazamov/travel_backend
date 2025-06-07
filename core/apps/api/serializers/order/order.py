@@ -9,6 +9,12 @@ class BaseOrderSerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "name",
+            "phone",
+            "payment_type",
+            "quantity",
+            "description",
+            "status"
+            
         ]
 
 
