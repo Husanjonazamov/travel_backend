@@ -4,11 +4,25 @@ from django_core.models import AbstractBaseModel
 
 
 class ContactModel(AbstractBaseModel):
-
-    name = models.CharField(verbose_name=_("name"), max_length=255)
+    name = models.CharField(
+        verbose_name=_("Ism && Familya"),
+        max_length=255, 
+        blank=True, null=True
+    )
+    email = models.EmailField(
+        verbose_name=_("Email"),
+        blank=True, null=True
+    )
+    phone = models.CharField(
+        verbose_name=_("Telefon")
+    )
+    description = models.TextField(
+        verbose_name=_("Xabar"),
+        blank=True, null=True
+    )
 
     def __str__(self):
-        return self.pk
+        return self.name
 
     @classmethod
     def _create_fake(self):

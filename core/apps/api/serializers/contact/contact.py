@@ -9,6 +9,9 @@ class BaseContactSerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "name",
+            "email",
+            "phone",
+            "description"
         ]
 
 
@@ -25,4 +28,7 @@ class CreateContactSerializer(BaseContactSerializer):
         fields = [
             "id",
             "name",
+            "email",
+            "phone",
+            "description"
         ]

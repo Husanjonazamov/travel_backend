@@ -32,10 +32,15 @@ PAGES = [
                 "icon": "tour",
                 "link": reverse_lazy("admin:api_travelmodel_changelist"),
             },
-             {
+            {
                 "title": _("Order"),
                 "icon": "shopping_cart",
                 "link": reverse_lazy("admin:api_ordermodel_changelist"),
+            },
+            {
+                "title": _("Contact"),
+                "icon": "contacts",
+                "link": reverse_lazy("admin:api_contactmodel_changelist"),
             },
         ],
     },

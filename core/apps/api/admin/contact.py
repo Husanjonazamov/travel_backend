@@ -8,5 +8,7 @@ from core.apps.api.models import ContactModel
 class ContactAdmin(ModelAdmin):
     list_display = (
         "id",
-        "__str__",
+        "name",
+        "email",
+        "phone"
     )
