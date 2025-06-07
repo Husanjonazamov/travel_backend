@@ -57,9 +57,10 @@ class RegisterView(BaseViewSetMixin, GenericViewSet, UserService):
         self.create_user(phone, data.get("first_name"), data.get("last_name"), data.get("password"))
         self.send_confirmation(phone)  # Send confirmation code for sms eskiz.uz
         return Response(
-            {"detail": _("Sms %(phone)s raqamiga yuborildi") % {"phone": phone}},
-            status=status.HTTP_202_ACCEPTED,
+            {"detail": "Foydalanuvchi muvaffaqiyatli ro'yxatdan o‘tdi"},
+            status=status.HTTP_201_CREATED,
         )
+
 
     @extend_schema(summary="Auth confirm.", description="Auth confirm user.")
     @action(methods=["POST"], detail=False, url_path="confirm")
