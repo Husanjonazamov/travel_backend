@@ -9,6 +9,13 @@ class BaseTravelSerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "name",
+            "location",
+            "description",
+            "time",
+            "image",
+            "price",
+            "type",
+            "status"
         ]
 
 

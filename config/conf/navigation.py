@@ -19,12 +19,18 @@ PAGES = [
             {
                 "title": _("Users"),
                 "icon": "group",
-                "link": reverse_lazy("admin:http_user_changelist"),
+                "link": reverse_lazy("admin:accounts_user_changelist"),
             },
+        ],
+    },
+    {
+        "title": _("Travel"),
+        "separator": True,  # Top border
+        "items": [
             {
-                "title": _("Group"),
-                "icon": "group",
-                "link": reverse_lazy("admin:auth_group_changelist"),
+                "title": _("Tour"),
+                "icon": "tour",
+                "link": reverse_lazy("admin:api_travelmodel_changelist"),
             },
         ],
     },
